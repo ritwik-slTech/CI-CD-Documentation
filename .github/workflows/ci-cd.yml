@@ -21,4 +21,4 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /odoo/custom/addons/test_odoo
-            git pull origin development  # Adjust the branch name
+            git pull origin development
