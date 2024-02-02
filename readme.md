@@ -4,7 +4,9 @@
 
 ### generate a key pair using command
 
-`ssh-keygen -m PEM -t rsa -b 4096`
+```
+ssh-keygen -m PEM -t rsa -b 4096
+```
 
 ### this will prompt the user to enter the file name of the key pairs, in my case i have given ritwk_key
 
