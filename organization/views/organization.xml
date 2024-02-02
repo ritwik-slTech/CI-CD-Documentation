@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_organization_form">
+            <field name="name">organization.data.form</field>
+            <field name="model">organization.data</field>
+            <field name="arch" type="xml">
+                <form string="organization">
+                <sheet>
+                <group >
+                            <field name="name"/>
+                            <field name="dep_ids"/>
+                            <field name="emp_ids"/>
+                </group>
+                </sheet>                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_organization_tree">
+            <field name="name">organization.data.tree</field>
+            <field name="model">organization.data</field>
+            <field name="arch" type="xml">
+                <tree string="organization">
+                    <field name="name"/>
+                    <field name="dep_ids"/>
+                    <field name="emp_ids"/>
+                    <!-- <field name="class_name"/> -->
+                    <!-- <field name="class_teacher_ids"/> -->
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="organization_action">
+            <field name="name">organization</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">organization.data</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_organization" name="organization" action="organization_action"/>
+
+    </data>
+</odoo>

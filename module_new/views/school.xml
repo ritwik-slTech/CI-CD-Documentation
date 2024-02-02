@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_school_form">
+            <field name="name">school.data.form</field>
+            <field name="model">school.data</field>
+            <field name="arch" type="xml">
+                <form string="analysis">
+                <sheet>
+                <group >
+                    
+    
+                            <field name="class_id" />
+                            <field name="teachers_ids"  widget='many2many_tags'/>
+                            <field name="students_ids"  widget='many2many_tags'/>
+                            <field name="subjects_ids"  widget='many2many_tags'/>
+                </group>
+                </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_school_tree">
+            <field name="name">school.data.tree</field>
+            <field name="model">school.data</field>
+            <field name="arch" type="xml">
+                <tree string="analysis">
+
+                    <field name="class_id" />
+                    <field name="teachers_ids"  widget='many2many_tags'/>
+                    <field name="students_ids"  widget='many2many_tags'/>
+                    <field name="subjects_ids"  widget='many2many_tags'/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="school_action">
+            <field name="name">school</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.data</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_school" name="school" action="school_action"/>
+
+    </data>
+</odoo>
