@@ -21,7 +21,7 @@
 {
     "name": "School",
     "category": "Purchase/Sale",
-    "author": "Ritwik",
+    "author": "Ritwik sadhu",
     "website": "https://www.sltecherpsolution.com/",
     "depends": [
         "base"
