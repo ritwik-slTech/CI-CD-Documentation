@@ -16,9 +16,11 @@ it will create two files, ritwk_key and ritwk_key.pub
 
 1. open the ritwk_key file and copy every single line, it should be like this
 
-`----BEGIN RSA PRIVATE KEY-----`
-`..... code ....`
-`-----END RSA PRIVATE KEY-----`
+```
+    ----BEGIN RSA PRIVATE KEY-----
+    ..... code ....
+    -----END RSA PRIVATE KEY-----
+```
 
 2. then go to your github repo's settings -> security -> secret and variables -> actions
 
