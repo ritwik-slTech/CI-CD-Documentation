@@ -46,38 +46,37 @@ https://_YOUR_GIHUB_USERNAME_:_YOUR_GITHUB_TOKEN_@_REST_OF_THE_GITHUB_URL
 
 ## step 4
 
-    1. in out project directory where we have out .git, create a new folder named .github and inside .github create a new folder named workflows
-    2. and create a new .yml file, in my case i have named my file ci-cd.yml
+1. in out project directory where we have out .git, create a new folder named .github and inside .github create a new folder named workflows
+2. and create a new .yml file, in my case i have named my file ci-cd.yml
 
-    3. inside the yml file paste the below code, and make sure the indentation is correct.
+3. inside the yml file paste the below code, and make sure the indentation is correct.
 
-    4. you can add or remove the lines from scripts based on the needs.
+4. you can add or remove the lines from scripts based on the needs.
 
+   ```
+       name: CI/CD Workflow
+       on:
+       push:
+           branches: ["development"]
+       jobs:
+       deploy:
+           runs-on: ubuntu-latest
+           steps:
+           - name: Update Odoo and Restart
+               uses: appleboy/ssh-action@v0.1.10
+               with:
+               host: ${{ secrets.SERVER_HOST }}
+               username: ${{ secrets.SERVER_USER }}
+               key: ${{ secrets.SERVER_SSH_KEY }}
+               port: 22
+               script: |
+                   cd /odoo/custom/addons/test_odoo
+                   git pull origin development
+                   sudo service odoo-server restart
 
-    ```
-        name: CI/CD Workflow
-        on:
-        push:
-            branches: ["development"]
-        jobs:
-        deploy:
-            runs-on: ubuntu-latest
-            steps:
-            - name: Update Odoo and Restart
-                uses: appleboy/ssh-action@v0.1.10
-                with:
-                host: ${{ secrets.SERVER_HOST }}
-                username: ${{ secrets.SERVER_USER }}
-                key: ${{ secrets.SERVER_SSH_KEY }}
-                port: 22
-                script: |
-                    cd /odoo/custom/addons/test_odoo
-                    git pull origin development
-                    sudo service odoo-server restart
+   ```
 
-    ```
-
-## step 4
+## step 5
 
 as soon as you commit this, in your github repo's actions section you will be able to see the an action running with the same name as the commit.,
 
