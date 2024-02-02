@@ -12,8 +12,6 @@
 
 ### open the ritwk_key file and copy every single line, it should be like this
 
------BEGIN RSA PRIVATE KEY-----
-
-..... code ....
-
------END RSA PRIVATE KEY-----
+`----BEGIN RSA PRIVATE KEY-----`
+`..... code ....`
+`-----END RSA PRIVATE KEY-----`
