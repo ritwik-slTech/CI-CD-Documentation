@@ -19,9 +19,9 @@
 #
 ##############################################################################
 {
-    "name": "School",
+    "name": "School2",
     "category": "Purchase/Sale",
-    "author": "Ritwik",
+    "author": "Ritwik sadhu and raja mondal",
     "website": "https://www.sltecherpsolution.com/",
     "depends": [
         "base"
