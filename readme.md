@@ -1,5 +1,11 @@
 # CI - CD
+Useful Links
 
+for setting sshkey and github secret :-
+
+```
+https://youtu.be/1i-0CdCANHQ?si=FMoul-OTaMIoXDGg
+```
 ## step 1
 
 1. generate a key pair using command
