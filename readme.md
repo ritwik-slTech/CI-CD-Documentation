@@ -84,7 +84,7 @@ if it fails then check there will be an option to re-run all jobs, check the ena
 
 # Possible Errors
 
-detected dubious ownership in repository .....
+## Error: detected dubious ownership in repository .....
 
 it is because while setting up odoo, we have made a different user, and that user have the permission to access the repository. to change this go to your root user, and try to access the directory.
 
