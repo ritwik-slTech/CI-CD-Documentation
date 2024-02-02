@@ -13,4 +13,3 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
-          script: "cd /odoo/custom/addons/test_odoo && git pull origin development"
