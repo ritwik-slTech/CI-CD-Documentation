@@ -6,6 +6,11 @@ for setting sshkey and github secret :-
 ```
 https://youtu.be/1i-0CdCANHQ?si=FMoul-OTaMIoXDGg
 ```
+for setting up github workflows
+```
+https://youtu.be/1i-0CdCANHQ?si=8M3RtaF9bU01D3za
+```
+
 ## step 1
 
 1. generate a key pair using command
