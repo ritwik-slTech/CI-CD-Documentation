@@ -16,7 +16,7 @@ jobs:
       - name: Update Odoo and Restart
         uses: appleboy/ssh-action@master
         with:
-          host: 112.213.36.32
+          host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
